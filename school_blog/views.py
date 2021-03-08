@@ -19,21 +19,6 @@ class StudentCreateView(CreateAPIView):
     serializer_class = StudentSerializer
 
 
-class SchoolDestroyView(DestroyAPIView):
-    queryset = School.objects.all()
-    serializer_class = SchoolSerializer
-
-
-class GroupDestroyView(DestroyAPIView):
-    queryset = Group.objects.all()
-    serializer_class = GroupSerializer
-
-
-class StudentDestroyView(DestroyAPIView):
-    queryset = Student.objects.all()
-    serializer_class = StudentSerializer
-
-
 class SchoolRetrieveView(RetrieveAPIView):
     queryset = School.objects.all()
     serializer_class = SchoolSerializer
@@ -60,6 +45,21 @@ class GroupListView(ListAPIView):
 
 
 class StudentListView(ListAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+
+class SchoolDestroyView(DestroyAPIView):
+    queryset = School.objects.all()
+    serializer_class = SchoolSerializer
+
+
+class GroupDestroyView(DestroyAPIView):
+    queryset = Group.objects.all()
+    serializer_class = GroupSerializer
+
+
+class StudentDestroyView(DestroyAPIView):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
